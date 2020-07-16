@@ -18,7 +18,7 @@ div{
 }
 /*Para encabezado*/
 
-thumb {
+.thumb{
     width: 200px;
     transition: 300ms all ease;
 }
