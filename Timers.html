@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        (function() {
+            var cont = 0;
+            //ejecuta una vez la funcion
+            var saludo = function(){
+                console.log("Hola mundo");
+            }
+            //Ejecuta la funcion una vez cada 2 segundos
+            setTimeout(saludo, 2000);
+
+            //Permite ejecutar la funcion varias veces
+            var saludo2 = function(){
+                cont ++;
+                console.log(cont);
+                
+                //Permite ejecutar 5 veces
+                if (cont === 5) {
+                    //recibe el id del interval
+                    clearInterval(interv);
+                }
+            }
+           //Ejecuta la funcion varias veces cada 3 segundos
+           var interv = setInterval(saludo2, 2000);
+            
+        }())
+    </script>
+</body>
+</html>
